@@ -5,6 +5,7 @@ import PopupMenu from "@/components/popup-menu";
 
 const MenuIcon = () => {
   const [isOpenMenu, setIsOpenMenu] = React.useState(false);
+  
   return (
     <>
       <button className="flex w-[20px]" onClick={() => setIsOpenMenu(true)}>

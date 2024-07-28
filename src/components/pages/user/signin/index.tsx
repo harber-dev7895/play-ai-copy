@@ -14,12 +14,16 @@ import Link from "next/link";
 import { PiLockKeyFill } from "react-icons/pi";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Slide, toast } from "react-toastify";
+import { useUserStore } from "@/stores/userStore";
+import { useRouter } from "next/navigation";
 
 const SigninPage = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
+  const { login } = useUserStore();
+  const router = useRouter();
   const handleUserChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUser(event.target.value);
   };
@@ -55,6 +59,10 @@ const SigninPage = () => {
 
   const handleSubmit = () => {
     if (!user && !password) notify();
+    else {
+      login();
+      router.replace("/");
+    }
     console.log("User:", user, "Password:", password);
   };
 

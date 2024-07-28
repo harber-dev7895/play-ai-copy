@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
-    "@headlessui/react": "^2.1.2",
+    "@headlessui/react": "^0.0.0-insiders.ca6a455",
     "@types/lodash.add": "^3.7.9",
     "embla-carousel-autoplay": "^8.1.7",
     "embla-carousel-react": "^8.1.7",
+    "framer-motion": "^11.3.19",
     "i": "^0.3.7",
     "lodash": "^4.17.21",
     "next": "14.2.5",

@@ -6,3 +6,6 @@ export { default as LotteryPage } from "./lottery";
 
 export { default as SignupPage } from "./user/signup";
 export { default as SigninPage } from "./user/signin";
+
+export { default as ContactPage } from "./contact";
+export { default as PromotionPage } from "./promotion";

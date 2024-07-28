@@ -8,6 +8,7 @@ import Image from "next/image";
 import "./style.scss";
 import { language } from "@data/lists";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 interface PopupMenuProps {
   isOpen: boolean;
@@ -82,13 +83,59 @@ const PopupMenu = ({ isOpen, setIsOpen }: PopupMenuProps) => {
                 </div>
 
                 <div className="content-wrapper">
-                  <div className="content-item text-[10px]">สมัครสมาชิก</div>
-                  <div className="content-item text-[10px]">เข้าสู่ระบบ</div>
-                  <div className="content-item text-sm font-light">
-                    โปรโมชั่น
-                  </div>
-                  <div className="content-item text-sm font-light">ติดต่อ</div>
-                  <div className="content-item col-span-2 my-2">
+                  <Link href={"/signup"} onClick={() => setIsOpen(false)}>
+                    <div className="content-item login-register">
+                      <Image
+                        className="w-[40px] mx-2"
+                        src="/images/register.png"
+                        alt="Logo"
+                        width={40}
+                        height={40}
+                      />
+                      <p>สมัครสมาชิก</p>
+                    </div>
+                  </Link>
+
+                  <Link href={"/signin"} onClick={() => setIsOpen(false)}>
+                    <div className="content-item login-register">
+                      <Image
+                        className="w-[40px] mx-2"
+                        src="/images/login.png"
+                        alt="Logo"
+                        width={40}
+                        height={40}
+                      />
+                      <p>เข้าสู่ระบบ</p>
+                    </div>
+                  </Link>
+
+                  <Link href={"/promotion"} onClick={() => setIsOpen(false)}>
+                    <div className="content-item promotion text-sm font-light">
+                      <Image
+                        className="w-[40px] mr-4"
+                        src="/images/promotion.png"
+                        alt="Logo"
+                        width={40}
+                        height={40}
+                      />
+                      <span>โปรโมชั่น</span>
+                    </div>
+                  </Link>
+
+                  <Link href={"/contact"} onClick={() => setIsOpen(false)}>
+                    <div className="content-item line text-sm font-light">
+                      <Image
+                        className="w-[40px] mr-4"
+                        src="/images/line.png"
+                        alt="Logo"
+                        width={40}
+                        height={40}
+                      />
+                      <span>ติดต่อ</span>
+                    </div>
+                  </Link>
+
+                  <div className="content-item col-span-2 py-2">
                     <p className="font-medium text-sm my-2 text-white">ภาษา</p>
                     <div className="flex justify-center gap-4">
                       {language.map((item: any, index: number) => {

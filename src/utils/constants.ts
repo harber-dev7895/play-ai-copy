@@ -1,1 +1,1 @@
-export const hiddenPaths = ["/signin", "/signup"];
+export const hiddenPaths = ["/signin", "/signup", "/promotion"];

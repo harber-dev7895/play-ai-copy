@@ -30,7 +30,7 @@ const Sidebar = () => {
   return (
     <div
       className={twMerge(
-        "sidebar lg:fixed relative top-0 lg:h-screen lg:max-w-[135px] max-w-[164px] w-full bg-repeat z-0 mt-2 bg-white"
+        "sidebar lg:fixed relative top-0 lg:h-screen lg:max-w-[135px] max-w-[164px] w-full bg-repeat z-0 mt-2"
       )}
     >
       <Fade direction="left">
