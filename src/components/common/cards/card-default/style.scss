@@ -1,0 +1,48 @@
+.card {
+  @apply relative bg-[#7675754d] rounded-xl;
+
+  .overlay {
+    @apply absolute top-0 left-0 w-full h-full bg-[#383653b3] max-md:hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+    border-radius: 15px;
+    z-index: 3;
+
+    .overlay-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 150px;
+      padding: 10px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        @apply text-white flex items-center justify-center gap-2 text-center p-[5px] min-w-[116px] min-h-[46px] rounded-[30px] font-semibold;
+        background: var(--bg-login-btn);
+        border: 0px solid #efeebe;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.2s;
+        box-shadow: 2px 2px 5px #00000080;
+      }
+    }
+  }
+
+  &:hover {
+    .overlay {
+      opacity: 1;
+      visibility: visible;
+
+      .overlay-inner a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

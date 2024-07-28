@@ -1,0 +1,14 @@
+.card-box-wrapper {
+  @apply relative text-center rounded-[30px] pt-[26px] pb-6 px-7;
+  background: var(--bg-signIn) !important;
+  z-index: 0;
+
+  .language {
+    @apply text-center my-1;
+
+    .active-lang {
+      border-bottom: 2px solid #53c7ff !important;
+      border-radius: 18px;
+    }
+  }
+}

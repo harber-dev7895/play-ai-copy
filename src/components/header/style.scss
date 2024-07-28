@@ -1,0 +1,159 @@
+.header {
+  @apply fixed top-0 left-0 w-full flex justify-between items-center lg:min-h-[75px] min-h-[65px] px-4 z-50;
+
+
+  .header-content {
+    @apply flex items-center;
+
+    .menu-wrapper {
+      @apply flex items-center gap-2;
+
+      .nav-item {
+        @apply border-2 border-white border-t-0 min-h-[81px] w-[75.5px] rounded-b-2xl text-center;
+
+        background-image: linear-gradient(180deg, #72ceff, #30c0fe),
+          linear-gradient(180deg, #fff, #fff);
+
+        &.active {
+          background-image: linear-gradient(180deg, #ff8081, #fe2f2d);
+          border-color: transparent;
+          color: white;
+        }
+
+        .nav-link {
+          @apply flex flex-wrap justify-center;
+
+          .img-wrapper {
+            @apply p-2 pt-[11px] pb-[7px];
+
+            img {
+              @apply rounded-xl;
+            }
+          }
+        }
+      }
+    }
+
+    .user-wrapper {
+      @apply md:ml-[2.8rem];
+
+      .btn-user {
+        @apply md:text-base text-sm gap-3 md:pr-2 pr-1 flex;
+
+        .btn {
+          @apply md:py-2 xs:py-[5px] py-[4px] md:px-4 xs:px-[15px] px-[4px] rounded-full text-white font-light;
+
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+            0 1px 1px rgba(0, 0, 0, 0.075);
+          filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+
+          &.btn-login {
+            @apply max-xs:min-w-[64px];
+            background-image: linear-gradient(
+              rgb(255, 126, 126),
+              rgb(254, 45, 43)
+            );
+          }
+
+          &.btn-register {
+            @apply max-xs:min-w-[82px];
+            background-image: radial-gradient(
+              100% 100% at 50% 0px,
+              rgb(114, 206, 255) 0px,
+              rgb(98, 200, 255) 44%,
+              rgb(39, 188, 255) 100%
+            );
+          }
+
+          &:hover {
+            filter: saturate(2);
+            text-shadow: 0 0 5px white, 0 0 15px white, 0 0 35px white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu_icon {
+  @apply relative bg-red-500 xs:-top-[5px] -top-[13px] -left-[2px];
+
+  span {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 60px;
+    background-color: #017ab7 !important;
+    border-radius: 9px;
+    transform: rotate(0);
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    &.one {
+      top: 16px;
+      width: 40px;
+      animation: width 2s ease infinite;
+    }
+    &.two {
+      top: 26px;
+      width: 30px;
+      animation: width1 2s ease infinite;
+    }
+    &.three {
+      top: 35px;
+      width: 50px;
+      animation: width2 2s ease infinite;
+    }
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 25px;
+  }
+  25% {
+    width: 15px;
+  }
+  50% {
+    width: 20px;
+  }
+  75% {
+    width: 25px;
+  }
+  to {
+    width: 30px;
+  }
+}
+@keyframes width1 {
+  0% {
+    width: 30px;
+  }
+  25% {
+    width: 20px;
+  }
+  50% {
+    width: 25px;
+  }
+  75% {
+    width: 15px;
+  }
+  to {
+    width: 25px;
+  }
+}
+@keyframes width2 {
+  0% {
+    width: 25px;
+  }
+  25% {
+    width: 10px;
+  }
+  50% {
+    width: 20px;
+  }
+  75% {
+    width: 15px;
+  }
+  to {
+    width: 20px;
+  }
+}

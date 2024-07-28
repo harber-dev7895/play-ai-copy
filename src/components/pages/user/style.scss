@@ -1,0 +1,27 @@
+.btn-login-register {
+  @apply w-full flex justify-center rounded-[30px] text-center text-white text-sm font-medium;
+  background: var(--bg-resgister-button) !important;
+  border: 0px solid #ffffff;
+
+  button {
+    @apply w-full flex justify-center gap-1 items-center py-[10px];
+  }
+}
+
+.btn-login-contact {
+  @apply w-full flex justify-center rounded-[30px] text-center text-white text-sm font-medium;
+  background-image: linear-gradient(
+    rgb(187, 255, 137) 0%,
+    rgb(127, 248, 55) 6%,
+    rgb(0, 183, 13) 52%,
+    rgb(0, 183, 13) 58%,
+    rgb(36, 224, 49) 90%,
+    rgb(184, 255, 131) 97%,
+    rgb(0, 183, 13) 100%
+  );
+  border: 1px solid #198754;
+
+  button {
+    @apply w-full flex justify-center gap-1 items-center py-[10px];
+  }
+}

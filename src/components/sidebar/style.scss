@@ -1,0 +1,35 @@
+.sidebar {
+  max-height: calc(100% - 88px);
+  z-index: 1;
+
+  @media (max-width: 1024px) {
+    max-height: 100%;
+  }
+
+  .navigation-drawer {
+    @apply h-full overflow-x-hidden overflow-y-auto;
+
+    .menu-list {
+      @apply flex flex-wrap gap-[15px] lg:px-6 sm:px-2 px-1 lg:pt-[97px] lg:pb-10 pb-7 h-full lg:overflow-auto lg:max-h-screen;
+
+      .menu-item {
+        @apply relative p-0 py-[10px] font-normal text-[hsla(0,0%,100%,.8)] rounded-[12px] cursor-pointer text-center w-full min-h-[92px] grid justify-center items-center mx-auto gap-0;
+        box-shadow: 0 2px 10px rgb(3 6 15 / 25%);
+
+        &::before {
+          @apply absolute top-1/2 left-0 bg-white;
+          content: "";
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          width: 3px;
+          height: 55%;
+          border-radius: 0 20px 20px 0;
+        }
+
+        span {
+          @apply md:text-sm text-xs max-lg:font-light;
+        }
+      }
+    }
+  }
+}

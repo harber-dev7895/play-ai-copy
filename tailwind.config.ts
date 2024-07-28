@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        play: ["Prompt", "sans-serif"],
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "side-bar": "linear-gradient(180deg, #72ceff, #30c0fe)",
+        "side-bar-active": "linear-gradient(180deg, #ff8081, #fe2f2d)",
+      },
+      colors: {
+        menu_icon: "#017ab7",
+      },
+      screens: {
+        xs: "398px",
       },
     },
   },

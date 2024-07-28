@@ -1,0 +1,50 @@
+.embla-banner {
+  @apply max-lg:px-1;
+  max-width: 100%;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: calc(100% / 2.5);
+
+  .embla__viewport {
+    @apply relative;
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin: 0.5rem 0;
+
+    @apply gap-2;
+  }
+  .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+
+    @media (max-width: 1024px) {
+      flex: 0 0 100%;
+    }
+  }
+  .embla__controls {
+    @apply absolute w-full top-1/2;
+    transform: translateY(-50%);
+  }
+  .embla__buttons {
+    @apply w-full flex justify-between;
+  }
+  .embla__button {
+    @apply px-2;
+
+    .icon-wrapper {
+      @apply rounded-full flex justify-center items-center w-[30px] h-[30px];
+      background: var(--background-image-top) !important;
+
+      svg {
+        @apply font-bold;
+      }
+    }
+  }
+  .embla__button:disabled {
+    color: var(--detail-high-contrast);
+  }
+}

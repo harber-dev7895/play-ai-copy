@@ -1,0 +1,29 @@
+.popup-wrapper {
+  @apply w-full h-full bg-transparent fixed top-0 left-0 z-50;
+
+  .popup {
+    @apply flex m-auto justify-center w-full h-full p-7 bg-[#d6f2ff];
+
+    .popup-content {
+      @apply relative w-[500px] text-center;
+
+      .popup-close {
+        @apply flex w-full justify-end;
+      }
+
+      .popup-logo {
+        @apply mb-5 mt-2 flex justify-center;
+      }
+      .content-wrapper {
+        @apply grid grid-cols-2 gap-1 text-white;
+
+        .content-item {
+          @apply p-3 rounded-lg cursor-pointer;
+          background-image: linear-gradient(180deg, #72ceff, #2ebdff);
+          box-shadow: inset 0 4px 10px #ffffffbf;
+          border: 1px solid transparent;
+        }
+      }
+    }
+  }
+}

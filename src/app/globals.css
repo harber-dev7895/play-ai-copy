@@ -1,33 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-image-main: linear-gradient(180deg, #9adcff, #53c7ff);
+  --background-image-top: linear-gradient(180deg, #72ceff, #30c0fe);
+  --bg-footer-theme-web: linear-gradient(180deg, #91d9ff, #55c8ff);
+  --bg-login-btn: linear-gradient(180deg, #ed2530, #ed2530);
+  --bg-btn-red: linear-gradient(180deg, #ff7f7e, #ff605c, #fe2f2d);
+  --bg-signIn: linear-gradient(180deg, #80d3fb, #28b1fd, #0377be);
+  --bg-resgister-button: linear-gradient(180deg, #59c6ff, #73cfff, #26bcff);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: "Prompt", sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  transition: all 0.3s;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.header {
+  background: var(--background-image-main);
+  border-bottom: 3px solid #53c7ff !important;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  box-shadow: 0 0 10px #000;
+}
+
+.btn-red {
+  @apply w-full p-2 rounded-3xl text-white;
+  background: var(--bg-btn-red) !important;
+}
+
+.tx-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 1rem;
+  height: 100%;
+  background-color: white;
+}
+
+.Toastify .Toastify__toast {
+  @apply rounded-lg max-md:w-[75%] max-md:mx-auto max-sm:mt-4;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  background: #ef476f !important;
 }
