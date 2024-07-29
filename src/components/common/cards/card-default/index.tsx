@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import "./style.scss";
 import Link from "next/link";
 import { FaCirclePlay } from "react-icons/fa6";
 import { useUserStore } from "@/stores/userStore";
+import { useRouter } from "next/navigation";
+import useIsTablet from "@/hooks/useIsTablet";
 
 interface CardDefaultProps {
   img: string;
@@ -10,9 +13,17 @@ interface CardDefaultProps {
 
 const CardDefault = ({ img }: CardDefaultProps) => {
   const { isLoggedIn } = useUserStore();
+  const isTablet = useIsTablet();
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (isTablet) {
+      isLoggedIn ? router.push("/") : router.push("/signin");
+    }
+  };
 
   return (
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <Image
         src={img}
         alt={""}

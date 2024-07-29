@@ -21,11 +21,21 @@ export const sidebarMenuData: any = [
 ];
 
 export const contentMenuData: any = [
-  { name: "ภารกิจ", link: "/", img: "/images/content-menu/1.webp" },
-  { name: "เปิดไพ่", link: "/", img: "/images/content-menu/2.png" },
-  { name: "รางวัล", link: "/", img: "/images/content-menu/3.webp" },
-  { name: "ดูหนัง", link: "/", img: "/images/content-menu/4.png" },
-  { name: "ดูบอล", link: "/", img: "/images/content-menu/5.webp" },
+  { name: "ภารกิจ", link: "/mission", img: "/images/content-menu/1.webp" },
+  { name: "เปิดไพ่", link: "/card-game", img: "/images/content-menu/2.png" },
+  { name: "รางวัล", link: "/reward", img: "/images/content-menu/3.webp" },
+  {
+    name: "ดูหนัง",
+    target: "_blank",
+    link: "https://movie007hd.com",
+    img: "/images/content-menu/4.png",
+  },
+  {
+    name: "ดูบอล",
+    target: "_blank",
+    link: "https://dooballhd365.com/?mtoken=eyJtIjoiZmFwMWEybTE4MDQ2OCIsIm0yIjoiZmFwMWEyIiwiYyI6IjIwMjQtMDctMzAgMDE6NDQ6MzMifQ==&returnUrl=https://play.ai123bet.com",
+    img: "/images/content-menu/5.webp",
+  },
 ];
 
 export const popupMenuUser: any = [

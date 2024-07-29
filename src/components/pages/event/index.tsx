@@ -4,8 +4,11 @@ import Image from "next/image";
 import { TitlePageUser } from "@/components/common";
 import { eventList } from "@data/lists";
 import Link from "next/link";
+import { useUserStore } from "@/stores/userStore";
 
 const EventPage = () => {
+  const { isLoggedIn } = useUserStore();
+
   return (
     <>
       <div className="max-w-[1320px] mx-auto my-[30px]">
@@ -20,7 +23,7 @@ const EventPage = () => {
                     key={index}
                     className="bg-[#53c7ffa6] rounded-[13px] m-auto p-1"
                   >
-                    <Link href={item.link}>
+                    <Link href={isLoggedIn ? item.link : "/signin"}>
                       <Image
                         src={item.img}
                         alt={""}

@@ -2,8 +2,12 @@
 import React from "react";
 import { contentMenuData } from "@data/menus";
 import Image from "next/image";
+import Link from "next/link";
+import { useUserStore } from "@/stores/userStore";
 
 const ContentMenu = () => {
+  const { isLoggedIn } = useUserStore();
+
   return (
     <div className="w-full lg:max-w-[877px] max-w-[540px] m-auto mt-3 lg:overflow-hidden my-[10px] animated animatedFadeInUp fadeInUp">
       <div className="flex lg:justify-center justify-between items-center lg:px-[50px] px-[5px] lg:gap-9 overflow-x-scroll overflow-y-hidden in-left">
@@ -13,17 +17,22 @@ const ContentMenu = () => {
               key={index}
               className="font-light flex max-lg:flex-col items-center gap-2 min-w-[70px] w-full py-1"
             >
-              <Image
-                src={item.img}
-                alt={""}
-                width={40}
-                height={40}
-                className="w-8"
-                unoptimized
-              />
-              <p className="lg:text-[0.875em] sm:text-base text-xs">
-                {item.name}
-              </p>
+              <Link
+                href={isLoggedIn ? item.link : "signin"}
+                target={item.target && isLoggedIn ? "_blank" : "_self"}
+              >
+                <Image
+                  src={item.img}
+                  alt={""}
+                  width={40}
+                  height={40}
+                  className="w-8"
+                  unoptimized
+                />
+                <p className="lg:text-[0.875em] sm:text-base text-xs">
+                  {item.name}
+                </p>
+              </Link>
             </div>
           );
         })}

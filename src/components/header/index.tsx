@@ -25,7 +25,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header-content">
-        <div className="lg:block hidden relative min-w-[338px]">
+        <div className="xl:block hidden relative min-w-[338px]">
           <NavMenu />
         </div>
         <User />
