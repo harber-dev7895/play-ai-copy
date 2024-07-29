@@ -25,3 +25,4 @@ export { default as ShareNetworkPage } from "./affiliate/share-network";
 export { default as DepositPage } from "./user/deposit";
 export { default as WithdrawPage } from "./user/withdraw";
 export { default as ProfilePage } from "./user/profile";
+export { default as StatementPage } from "./user/statement";
