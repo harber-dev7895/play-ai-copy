@@ -32,7 +32,7 @@ const RewardPage = () => {
                 height={45}
                 className="w-[50px]"
               />
-              <p className="">เพชรของคุณ 0</p>
+              <p>เพชรของคุณ 0</p>
               <IoReload size={22} />
             </div>
 

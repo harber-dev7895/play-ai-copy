@@ -2,7 +2,7 @@
   @apply w-full h-full bg-transparent fixed top-0 left-0 z-50;
 
   .popup {
-    @apply flex m-auto justify-center w-full h-full p-7 bg-[#d6f2ff];
+    @apply flex m-auto justify-center w-full h-full md:p-7 p-[10px] bg-[#d6f2ff];
 
     .popup-content {
       @apply relative w-[500px] text-center;
@@ -24,7 +24,7 @@
           border: 1px solid transparent;
 
           &.login-register {
-            @apply text-[10px] min-h-[100px] flex justify-center items-center mb-2;
+            @apply text-[10px] min-h-[100px] flex justify-center items-center md:mb-2;
           }
           &.promotion,
           &.line {

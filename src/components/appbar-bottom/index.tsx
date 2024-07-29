@@ -13,19 +13,18 @@ const AppbarBottom = () => {
         <div className="ab-menu-wrapper app-left">
           {isLoggedIn ? (
             <>
-              <Link className="" href={"/deposit"}>
+              <Link href={"/deposit"}>
                 <Image
-                  className=""
                   src="/images/appbar-bottom/deposit.png"
                   alt=""
                   width={32}
                   height={32}
                   priority
                 />
-                <span className="">ฝากเงิน</span>
+                <span>ฝากเงิน</span>
               </Link>
 
-              <Link className="" href={"/withdraw"}>
+              <Link href={"/withdraw"}>
                 <Image
                   className="w-[32px]"
                   src="/images/appbar-bottom/withdraw.png"
@@ -33,12 +32,12 @@ const AppbarBottom = () => {
                   width={32}
                   height={32}
                 />
-                <span className="">ถอนเงิน</span>
+                <span>ถอนเงิน</span>
               </Link>
             </>
           ) : (
             <>
-              <Link className="" href={"/signin"}>
+              <Link href={"/signin"}>
                 <Image
                   className="w-[32px]"
                   src="/images/appbar-bottom/login.png"
@@ -46,27 +45,25 @@ const AppbarBottom = () => {
                   width={32}
                   height={32}
                 />
-                <span className="">เข้าสู่ระบบ</span>
+                <span>เข้าสู่ระบบ</span>
               </Link>
-              <Link className="" href={"/signup"}>
+              <Link href={"/signup"}>
                 <Image
-                  className=""
                   src="/images/appbar-bottom/register.png"
                   alt=""
                   width={32}
                   height={32}
                   priority
                 />
-                <span className="">สมัครสมาชิก</span>
+                <span>สมัครสมาชิก</span>
               </Link>
             </>
           )}
         </div>
 
-        <a className="ab-logo">
+        <Link href={"/"} className="ab-logo">
           <div className="w-[80px]">
             <Image
-              className=""
               src="/images/logo-4x4.png"
               alt="Logo"
               width={80}
@@ -74,7 +71,7 @@ const AppbarBottom = () => {
               priority
             />
           </div>
-        </a>
+        </Link>
 
         <div className="fake-center-bg-wrapper">
           <svg viewBox="-10 -1 30 12">
@@ -98,27 +95,25 @@ const AppbarBottom = () => {
         </div>
 
         <div className="ab-menu-wrapper app-right">
-          <Link href={"/event"} className="">
+          <Link href={"/event"}>
             <Image
-              className=""
               src="/images/appbar-bottom/activity.png"
               alt=""
               width={32}
               height={32}
               priority
             />
-            <span className="">กิจกรรม</span>
+            <span>กิจกรรม</span>
           </Link>
-          <Link href={"/"} className="">
+          <Link href={"/"}>
             <Image
-              className=""
               src="/images/appbar-bottom/line.png"
               alt=""
               width={32}
               height={32}
               priority
             />
-            <span className="">Line</span>
+            <span>Line</span>
           </Link>
         </div>
       </div>

@@ -5,7 +5,7 @@ import Reveal from "react-awesome-reveal";
 import { IoCloseCircle } from "react-icons/io5";
 import Image from "next/image";
 
-import "./style.scss";
+// import "./style.scss";
 import { language } from "@data/lists";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
@@ -76,7 +76,6 @@ const PopupMenuUser = ({ isOpen, setIsOpen }: PopupMenuUserProps) => {
 
                 <div className="popup-logo">
                   <Image
-                    className=""
                     src="/images/logo-4x4.png"
                     alt="Logo"
                     width={160}

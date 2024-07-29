@@ -9,13 +9,10 @@ const CardMission = () => {
         </div>
       </div>
 
-      {/* top: 8px;
-  right: -40px; */}
-
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-2">
           <div className="left">
-            <p className="">ฝากครบ 100 บาท รับเพชร 10 เม็ด</p>
+            <p>ฝากครบ 100 บาท รับเพชร 10 เม็ด</p>
             <p className="font-light line-clamp-1">
               สะสมยอดฝากครบ 100 บาท ต่อวัน รับเพชร 10 เม็ด นำเพชรที่ได้รับ
               สะสมไปแลกที่เมนู “รางวัล”
@@ -34,7 +31,7 @@ const CardMission = () => {
             </p>
           </div>
         </div>
-        <div className="">
+        <div>
           <Image
             src={`/images/diamond-plus.png`}
             alt={""}

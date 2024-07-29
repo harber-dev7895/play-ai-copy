@@ -33,7 +33,7 @@ const Bank = () => {
           <span>ธ.กสิกรไทย จำกัด (มหาชน)</span>
         </div>
 
-        <p className="">
+        <p>
           นาย เปรมวิทย์ อัครสินหิรัญกุล <span className="mx-2">|</span>
           1388062807
         </p>
@@ -55,7 +55,7 @@ const Bank = () => {
           />
           <span>ธ.ไทยพาณิชย์ จำกัด (มหาชน)</span>
         </div>
-        <p className="">พงศธร อามอ : 5074219461</p>
+        <p>พงศธร อามอ : 5074219461</p>
 
         <div className="flex justify-center">
           <div className="text-white bg-red-main py-[6px] px-4 font-medium rounded-[30px] flex gap-4 items-center">

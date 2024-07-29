@@ -25,7 +25,7 @@ const ProfilePage = () => {
               width={60}
               height={60}
             />
-            <div className="">
+            <div>
               <p className="font-medium">
                 0617894561 <span className="text-sm">( fap1a2m180468 )</span>
               </p>
@@ -57,7 +57,7 @@ const ProfilePage = () => {
               <span>ธ.กสิกรไทย จำกัด (มหาชน)</span>
             </div>
 
-            <p className="">
+            <p>
               นาย เปรมวิทย์ อัครสินหิรัญกุล <span className="mx-2">|</span>
               1388062807
             </p>
@@ -73,7 +73,7 @@ const ProfilePage = () => {
             </div>
 
             <div className="flex justify-between border-b border-gray-300">
-              <div className="">
+              <div>
                 <p className="font-light text-sm">ยอดฝากปัจจุบัน</p>
                 <p className="font-medium">0.00 บาท</p>
               </div>

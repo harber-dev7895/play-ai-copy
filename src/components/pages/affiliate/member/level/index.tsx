@@ -12,7 +12,7 @@ const Level = () => {
               key={level}
               className="w-full bg-[#0000000a] p-2 flex justify-between"
             >
-              <div className="">
+              <div>
                 <p className="flex items-center gap-2 font-light">
                   <Image
                     src={"/images/level-1.png"}
@@ -23,7 +23,7 @@ const Level = () => {
                   <span>LV {level}</span>
                 </p>
 
-                <p className="">
+                <p>
                   <span className="text-2xl">0</span>{" "}
                   <span className="font-light">คน</span>
                 </p>
@@ -32,7 +32,7 @@ const Level = () => {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <p className="text-sm font-light">จากเดือนที่แล้ว</p>
-                <div className="">
+                <div>
                   <span className="text-white bg-gray-900 rounded-md text-[13px] font-medium px-2">
                     0.00%
                   </span>

@@ -55,7 +55,7 @@ const LossPage = () => {
                   boxShadow: "inset 0 0 0 2px #53c7ff",
                 }}
               >
-                <div className="">
+                <div>
                   <p className="text-[1.75rem] font-medium">0.00</p>
                   <p className="text-sm">คืนยอดเสียสะสมทั้งหมด</p>
                 </div>
@@ -67,7 +67,7 @@ const LossPage = () => {
                   boxShadow: "inset 0 0 0 2px #53c7ff",
                 }}
               >
-                <div className="">
+                <div>
                   <p className="text-[1.75rem] font-medium">0.00</p>
                   <p className="text-sm">คืนยอดเสียสะสมเดือนนี้</p>
                 </div>

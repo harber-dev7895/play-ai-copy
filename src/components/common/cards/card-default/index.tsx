@@ -2,12 +2,15 @@ import Image from "next/image";
 import "./style.scss";
 import Link from "next/link";
 import { FaCirclePlay } from "react-icons/fa6";
+import { useUserStore } from "@/stores/userStore";
 
 interface CardDefaultProps {
   img: string;
 }
 
 const CardDefault = ({ img }: CardDefaultProps) => {
+  const { isLoggedIn } = useUserStore();
+
   return (
     <div className="card">
       <Image
@@ -21,8 +24,9 @@ const CardDefault = ({ img }: CardDefaultProps) => {
 
       <div className="overlay">
         <div className="overlay-inner">
-          <Link href={"/"}>
-            <FaCirclePlay size={20} /> <span>เข้าสู่ระบบ</span>
+          <Link href={isLoggedIn ? "/" : "/signin"}>
+            <FaCirclePlay size={20} />
+            <span>{isLoggedIn ? "เข้าเล่น" : "เข้าสู่ระบบ"}</span>
           </Link>
         </div>
       </div>

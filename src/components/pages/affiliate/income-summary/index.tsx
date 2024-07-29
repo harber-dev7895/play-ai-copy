@@ -27,17 +27,17 @@ const IncomeSummaryPage = () => {
                   boxShadow: "inset 0 0 0 2px #53c7ff",
                 }}
               >
-                <div className="">
+                <div>
                   <p className="text-sm">รายได้จากเครือข่าย ทั้งหมด</p>
                   <p className="text-[1.75rem] font-medium">0.00</p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                  <div className="">
+                  <div>
                     <span className="text-white bg-gray-900 rounded-md text-[13px] font-medium px-2">
                       0.00%
                     </span>
                   </div>
-                  <p className="">จากเดือนที่แล้ว</p>
+                  <p>จากเดือนที่แล้ว</p>
                 </div>
               </div>
 
@@ -135,7 +135,7 @@ const IncomeSummaryPage = () => {
 
                 {levelList.map((level) => {
                   return (
-                    <div className="" key={level}>
+                    <div key={level}>
                       <div className="flex items-center gap-2">
                         <Image
                           src={"/images/level-1.png"}

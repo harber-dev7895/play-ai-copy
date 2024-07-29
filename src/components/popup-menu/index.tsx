@@ -9,6 +9,7 @@ import "./style.scss";
 import { language } from "@data/lists";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { useUserStore } from "@/stores/userStore";
 
 interface PopupMenuProps {
   isOpen: boolean;
@@ -16,6 +17,7 @@ interface PopupMenuProps {
 }
 
 const PopupMenu = ({ isOpen, setIsOpen }: PopupMenuProps) => {
+  const { isLoggedIn } = useUserStore();
   const [animation, setAnimation] = React.useState<Keyframes | undefined>(
     undefined
   );
@@ -73,7 +75,6 @@ const PopupMenu = ({ isOpen, setIsOpen }: PopupMenuProps) => {
 
                 <div className="popup-logo">
                   <Image
-                    className=""
                     src="/images/logo-4x4.png"
                     alt="Logo"
                     width={160}
@@ -83,31 +84,63 @@ const PopupMenu = ({ isOpen, setIsOpen }: PopupMenuProps) => {
                 </div>
 
                 <div className="content-wrapper">
-                  <Link href={"/signup"} onClick={() => setIsOpen(false)}>
-                    <div className="content-item login-register">
-                      <Image
-                        className="w-[40px] mx-2"
-                        src="/images/register.png"
-                        alt="Logo"
-                        width={40}
-                        height={40}
-                      />
-                      <p>สมัครสมาชิก</p>
-                    </div>
-                  </Link>
+                  {isLoggedIn ? (
+                    <>
+                      <Link href={"/deposit"} onClick={() => setIsOpen(false)}>
+                        <div className="content-item login-register">
+                          <Image
+                            className="w-[40px] mx-2"
+                            src="/images/appbar-bottom/deposit.png"
+                            alt="Logo"
+                            width={40}
+                            height={40}
+                          />
+                          <p>ฝากเงิน</p>
+                        </div>
+                      </Link>
 
-                  <Link href={"/signin"} onClick={() => setIsOpen(false)}>
-                    <div className="content-item login-register">
-                      <Image
-                        className="w-[40px] mx-2"
-                        src="/images/login.png"
-                        alt="Logo"
-                        width={40}
-                        height={40}
-                      />
-                      <p>เข้าสู่ระบบ</p>
-                    </div>
-                  </Link>
+                      <Link href={"/withdraw"} onClick={() => setIsOpen(false)}>
+                        <div className="content-item login-register">
+                          <Image
+                            className="w-[40px] mx-2"
+                            src="/images/appbar-bottom/withdraw.png"
+                            alt="Logo"
+                            width={40}
+                            height={40}
+                          />
+                          <p>ถอนเงิน</p>
+                        </div>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link href={"/signup"} onClick={() => setIsOpen(false)}>
+                        <div className="content-item login-register">
+                          <Image
+                            className="w-[40px] mx-2"
+                            src="/images/register.png"
+                            alt="Logo"
+                            width={40}
+                            height={40}
+                          />
+                          <p>สมัครสมาชิก</p>
+                        </div>
+                      </Link>
+
+                      <Link href={"/signin"} onClick={() => setIsOpen(false)}>
+                        <div className="content-item login-register">
+                          <Image
+                            className="w-[40px] mx-2"
+                            src="/images/login.png"
+                            alt="Logo"
+                            width={40}
+                            height={40}
+                          />
+                          <p>เข้าสู่ระบบ</p>
+                        </div>
+                      </Link>
+                    </>
+                  )}
 
                   <Link href={"/promotion"} onClick={() => setIsOpen(false)}>
                     <div className="content-item promotion text-sm font-light">

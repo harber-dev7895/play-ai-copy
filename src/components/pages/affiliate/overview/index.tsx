@@ -58,17 +58,17 @@ const OverviewPage = () => {
                   boxShadow: "inset 0 0 0 2px #53c7ff",
                 }}
               >
-                <div className="">
+                <div>
                   <p className="text-[1.75rem] font-medium">0.00</p>
                   <p className="text-sm">รายได้จากเครือข่าย ทั้งหมด</p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                  <div className="">
+                  <div>
                     <span className="text-white bg-gray-900 rounded-md text-[13px] font-medium px-2">
                       0.00%
                     </span>
                   </div>
-                  <p className="">จากเดือนที่แล้ว</p>
+                  <p>จากเดือนที่แล้ว</p>
                 </div>
               </div>
 
@@ -144,7 +144,7 @@ const OverviewPage = () => {
 
               <div className="flex justify-between gap-2 font-light text-sm">
                 <div className="bg-[#0000000a] p-[0.75rem] flex justify-between items-center w-full">
-                  <div className="">
+                  <div>
                     <Image
                       src={"/images/total-clicks.png"}
                       alt={""}
@@ -157,8 +157,8 @@ const OverviewPage = () => {
                   </div>
 
                   <div className="flex flex-col justify-center items-center">
-                    <p className="">จากเดือนที่แล้ว</p>
-                    <div className="">
+                    <p>จากเดือนที่แล้ว</p>
+                    <div>
                       <span className="text-white bg-gray-900 rounded-md text-[13px] font-medium px-2">
                         0.00%
                       </span>
@@ -166,7 +166,7 @@ const OverviewPage = () => {
                   </div>
                 </div>
                 <div className="bg-[#0000000a] p-[0.75rem] flex justify-between items-center w-full">
-                  <div className="">
+                  <div>
                     <Image
                       src={"/images/total-members.png"}
                       alt={""}
@@ -179,8 +179,8 @@ const OverviewPage = () => {
                   </div>
 
                   <div className="flex flex-col justify-center items-center">
-                    <p className="">จากเดือนที่แล้ว</p>
-                    <div className="">
+                    <p>จากเดือนที่แล้ว</p>
+                    <div>
                       <span className="text-white bg-gray-900 rounded-md text-[13px] font-medium px-2">
                         0.00%
                       </span>

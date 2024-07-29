@@ -23,7 +23,7 @@ const MemberPage = () => {
                   boxShadow: "inset 0 0 0 2px #53c7ff",
                 }}
               >
-                <div className="">
+                <div>
                   <p className="text-sm flex items-center gap-2 mt-2">
                     <Image
                       src={"/images/active-user.png"}
@@ -41,12 +41,12 @@ const MemberPage = () => {
                   </p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                  <div className="">
+                  <div>
                     <span className="text-white bg-gray-900 rounded-md text-[13px] font-medium px-2">
                       0.00%
                     </span>
                   </div>
-                  <p className="">จากเดือนที่แล้ว</p>
+                  <p>จากเดือนที่แล้ว</p>
                 </div>
               </div>
 
