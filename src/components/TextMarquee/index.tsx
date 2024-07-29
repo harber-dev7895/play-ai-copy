@@ -7,7 +7,7 @@ const TextMarquee = () => {
 
   return (
     <div
-      className="tx-marquee flex p-2 relative -z-10 text-sm font-light"
+      className="tx-marquee flex p-2 relative -z-10 text-sm font-light mx-auto animated animatedFadeInUp fadeInUp"
       style={{ lineHeight: "unset", boxShadow: "0 2px 7px rgb(0 0 0 / 25%)" }}
     >
       <Image

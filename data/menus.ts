@@ -1,8 +1,13 @@
 export const NavMenuData: any = [
-  { name: "แนะนำเพื่อน", link: "/", img: "/images/nav-menu/1.png" },
-  { name: "คืนยอดเสีย", link: "/", img: "/images/nav-menu/2.png" },
-  { name: "กิจกรรม", link: "/", img: "/images/nav-menu/3.png" },
-  { name: "โปรโมชั่น", link: "/", img: "/images/nav-menu/4.png" },
+  {
+    name: "แนะนำเพื่อน",
+    link: "/affiliate/overview",
+    pathMain: '/affiliate',
+    img: "/images/nav-menu/1.png",
+  },
+  { name: "คืนยอดเสีย", link: "/loss", img: "/images/nav-menu/2.png" },
+  { name: "กิจกรรม", link: "/event", img: "/images/nav-menu/3.png" },
+  { name: "โปรโมชั่น", link: "/promotion", img: "/images/nav-menu/4.png" },
 ];
 
 export const sidebarMenuData: any = [
@@ -46,4 +51,11 @@ export const footerSlide: any = [
   "/images/footer-slide/10.png",
   "/images/footer-slide/11.png",
   "/images/footer-slide/12.png",
+];
+
+export const overviewMenuData: any = [
+  { name: "ภาพรวม", link: "/affiliate/overview" },
+  { name: "สมาชิก", link: "/affiliate/member" },
+  { name: "สรุปรายได้", link: "/affiliate/income-summary" },
+  { name: "เครือข่าย", link: "/affiliate/share-network" },
 ];

@@ -1,10 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import UserCardBox from "../card-box";
-import { Keyframes } from "@emotion/react";
-import Reveal from "react-awesome-reveal";
-import { customFadeIn } from "@/components/common/fade/custom-fadeIn";
 
 import "../style.scss";
 import { FaUser } from "react-icons/fa6";
@@ -13,41 +10,21 @@ import { twMerge } from "tailwind-merge";
 import Link from "next/link";
 
 const SignupPage = () => {
-  const [animation, setAnimation] = React.useState<Keyframes | undefined>(
-    undefined
-  );
-
-  useEffect(() => {
-    setAnimation(customFadeIn);
-  }, []);
-
   return (
     <div className="max-w-[1320px] mx-auto flex justify-center sm:py-8 py-7 max-lg:mx-4">
       <div className="relative lg:w-[41.66666667%] w-full max-w-[600px]">
-        <Reveal
-          keyframes={animation}
-          triggerOnce
-          duration={600}
-          className="relative z-10"
-        >
-          <div className="flex justify-center">
-            <Image
-              className="lg:w-[224px] sm:w-[156px] w-[128px] translate-y-[1.8rem]"
-              src="/images/logo-4x4.png"
-              alt="Logo"
-              width={224}
-              height={249}
-              priority
-            />
-          </div>
-        </Reveal>
+        <div className="flex justify-center animated animatedFadeInUp fadeInUp">
+          <Image
+            className="lg:w-[224px] sm:w-[156px] w-[128px] translate-y-[1.8rem]"
+            src="/images/logo-4x4.png"
+            alt="Logo"
+            width={224}
+            height={249}
+            priority
+          />
+        </div>
 
-        <Reveal
-          keyframes={animation}
-          triggerOnce
-          duration={800}
-          className="relative z-0"
-        >
+        <div className="animated animatedFadeInUp fadeInUp">
           <UserCardBox>
             <p className="text-white font-light mb-1">
               สมัครสมาชิกด้วยเบอร์โทรศัพท์
@@ -73,27 +50,25 @@ const SignupPage = () => {
               <button className="btn-red">ถัดไป</button>
             </div>
           </UserCardBox>
-        </Reveal>
+        </div>
 
-        <Reveal keyframes={animation} triggerOnce duration={800}>
-          <div className="grid grid-cols-2 gap-6 mt-4 px-4">
-            <div className="btn-login-register">
-              <Link href={"/signin"} className="w-full">
-                <button>
-                  <FaUser />
-                  <span>เข้าสู่ระบบ</span>
-                </button>
-              </Link>
-            </div>
-
-            <div className="btn-login-contact">
+        <div className="grid grid-cols-2 gap-6 mt-4 px-4 animated animatedFadeInUp fadeInUp">
+          <div className="btn-login-register">
+            <Link href={"/signin"} className="w-full">
               <button>
-                <BsTelephoneFill />
-                <span>ติดต่อ</span>
+                <FaUser />
+                <span>เข้าสู่ระบบ</span>
               </button>
-            </div>
+            </Link>
           </div>
-        </Reveal>
+
+          <div className="btn-login-contact">
+            <button>
+              <BsTelephoneFill />
+              <span>ติดต่อ</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

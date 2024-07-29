@@ -6,24 +6,16 @@ import "./style.scss";
 import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
 import { sidebarMenuData } from "@data/menus";
-import { Fade } from "react-awesome-reveal";
 
 import { Slide, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Fragment } from "react";
+import { notiSetting } from "@/utils/constants";
 
 const Sidebar = () => {
   const pathname = usePathname();
   const notify = () =>
     toast.warn("is coming...", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
+      ...notiSetting,
       transition: Slide,
     });
 
@@ -33,8 +25,8 @@ const Sidebar = () => {
         "sidebar lg:fixed relative top-0 lg:h-screen lg:max-w-[135px] max-w-[164px] w-full bg-repeat z-0 mt-2"
       )}
     >
-      <Fade direction="left">
-        <div className="navigation-drawer">
+      <div>
+        <div className="navigation-drawer animated animatedFadeInUp in-left">
           <div className="menu-list">
             {sidebarMenuData.map((item: any, index: number) => {
               return (
@@ -86,7 +78,7 @@ const Sidebar = () => {
             })}
           </div>
         </div>
-      </Fade>
+      </div>
     </div>
   );
 };

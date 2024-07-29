@@ -114,3 +114,20 @@ export const promotions = [
   <p>• ขอสงวนสิทธิ์ในการตัดสินใจเพียงผู้เดียวและเมื่อใดก็ตาม ที่ทำการแก้ไข เปลี่ยนแปลง ยกเลิก หรือ ทำให้โปรโมชั่นเป็นโมฆะ โดยที่ไม่ต้องแจ้งให้ทราบล่วงหน้า</p>`,
   },
 ];
+
+export const eventList = [
+  { img: "/images/event/1.png", link: "/affiliate/overview" },
+  { img: "/images/event/2.png", link: "/loss" },
+  { img: "/images/event/3.png", link: "/promotion" },
+  { img: "/images/event/4.png", link: "/mission" },
+  { img: "/images/event/5.png", link: "/card-game" },
+  { img: "/images/event/6.png", link: "/reward" },
+  { img: "/images/event/7.png", link: "/privilege" },
+  { img: "/images/event/8.png", link: "/rebate" },
+];
+
+export const privilegeList = [
+  { img: "/images/privilege/1.png", title: "ดูหนัง" },
+  { img: "/images/privilege/2.png", title: "ดูบอล" },
+  { img: "/images/privilege/3.png", title: "ดูการ์ตูน" },
+];

@@ -1,9 +1,17 @@
+"use client";
+import Link from "next/link";
 import Image from "next/image";
 import { NavMenuData } from "@data/menus";
-import "../style.scss";
 import { twMerge } from "tailwind-merge";
+import "../style.scss";
+import { usePathname } from "next/navigation";
+
+const extractBasePath = (pathname: string): string =>
+  `/${pathname.split("/")[1] || ""}`;
 
 const NavMenu = () => {
+  const pathname = usePathname();
+
   return (
     <div className="absolute top-[-36px] left-0">
       <ul className="nav menu-wrapper mb-0 flex-wrap">
@@ -11,9 +19,15 @@ const NavMenu = () => {
           return (
             <li
               key={index}
-              className={twMerge("nav-item", index === 0 ? "active" : "")}
+              className={twMerge(
+                "nav-item",
+                item.link === pathname ||
+                  item.pathMain === extractBasePath(pathname)
+                  ? "active"
+                  : ""
+              )}
             >
-              <a href={item.link} className="nav-link" target="_self">
+              <Link href={item.link} className="nav-link" target="_self">
                 <div className="img-wrapper">
                   <Image
                     src={`${item.img}`}
@@ -24,7 +38,7 @@ const NavMenu = () => {
                   />
                 </div>
                 <div className="text-xs font-light">{item.name}</div>
-              </a>
+              </Link>
             </li>
           );
         })}

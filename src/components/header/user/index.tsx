@@ -6,6 +6,7 @@ import Image from "next/image";
 import { IoReload } from "react-icons/io5";
 import { FaUser } from "react-icons/fa6";
 import PopupMenuUser from "@/components/popup-menu-user";
+import { twMerge } from "tailwind-merge";
 
 const User = () => {
   const { isLoggedIn } = useUserStore();
@@ -25,9 +26,9 @@ const User = () => {
           </div>
         ) : (
           <div className="flex items-center gap-3">
-            <div className="flex gap-2 text-white font-light">
+            <div className="lg:flex hidden gap-2 text-white font-light">
               <Link
-                href={"/"}
+                href={"/deposit"}
                 className="flex-grow py-2 px-6 rounded-md"
                 style={{
                   background: "linear-gradient(180deg,#ED2530,#ED2530)",
@@ -36,7 +37,7 @@ const User = () => {
                 <p>ฝากเงิน</p>
               </Link>
               <Link
-                href={"/"}
+                href={"/withdraw"}
                 className="flex-grow py-2 px-6 rounded-md"
                 style={{
                   background: "linear-gradient(180deg, #72ceff, #2ebdff)",
@@ -48,14 +49,16 @@ const User = () => {
               </Link>
             </div>
 
-            <p className="ml-3 mr-4">0617894561</p>
+            <p className="max-lg:hidden ml-3 mr-4">0617894561</p>
 
             <div
-              className="relative flex items-center rounded-[30px] bg-[#4248676e] min-w-[135px]"
-              style={{ padding: ".1rem 1.5rem .2rem 1.75rem" }}
+              className={twMerge(
+                "relative flex items-center rounded-[30px] lg:bg-[#4248676e] bg-white/15 md:min-w-[135px] min-w-[120px]",
+                "pd:py-[0.1rem] md:pr-6 md:pl-7 px-1"
+              )}
             >
               <Image
-                className="w-[30px] absolute -left-2"
+                className="w-[30px] absolute -left-2 max-md:hidden"
                 src="/images/ic-coin.png"
                 alt="Logo"
                 width={30}
@@ -72,15 +75,20 @@ const User = () => {
                     height={20}
                   />
                 </div>
-                <div>
+                <div className="flex items-center gap-2">
                   <IoReload />
+                  <FaUser
+                    size={22}
+                    className="text-white cursor-pointer md:hidden block"
+                    onClick={() => setIsOpenMenu(true)}
+                  />
                 </div>
               </div>
             </div>
 
             <FaUser
               size={22}
-              className="text-white cursor-pointer"
+              className="text-white cursor-pointer md:block hidden"
               onClick={() => setIsOpenMenu(true)}
             />
           </div>

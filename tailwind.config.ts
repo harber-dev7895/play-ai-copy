@@ -14,6 +14,10 @@ const config: Config = {
       backgroundImage: {
         "side-bar": "linear-gradient(180deg, #72ceff, #30c0fe)",
         "side-bar-active": "linear-gradient(180deg, #ff8081, #fe2f2d)",
+        "box-content": "linear-gradient(180deg, #9adcff, #53c7ff)",
+        "red-main": "linear-gradient(180deg,#ED2530,#ED2530)",
+        "box-overview": "linear-gradient(180deg, #d6f2ff, #d6f2ff)",
+        "btn-withdrawn": "linear-gradient(180deg, #c22949, #c53551)",
       },
       colors: {
         menu_icon: "#017ab7",

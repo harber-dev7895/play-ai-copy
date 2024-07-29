@@ -1,38 +1,66 @@
 "use client";
 import Image from "next/image";
 import "./style.scss";
-import { usePathname } from "next/navigation";
-import { hiddenPaths } from "@/utils/constants";
+import { useUserStore } from "@/stores/userStore";
+import Link from "next/link";
 
 const AppbarBottom = () => {
-  const pathname = usePathname();
-  const isHiddenPage = hiddenPaths.includes(pathname);
+  const { isLoggedIn } = useUserStore();
 
-  return !isHiddenPage ? (
+  return (
     <div className="lg:hidden block fixed bottom-0 left-0 w-full z-10">
       <div className="flex items-end">
         <div className="ab-menu-wrapper app-left">
-          <a className="w-[32px]">
-            <Image
-              className=""
-              src="/images/appbar-bottom/login.png"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <span className="">เข้าสู่ระบบ</span>
-          </a>
-          <a className="">
-            <Image
-              className=""
-              src="/images/appbar-bottom/register.png"
-              alt=""
-              width={32}
-              height={32}
-              priority
-            />
-            <span className="">สมัครสมาชิก</span>
-          </a>
+          {isLoggedIn ? (
+            <>
+              <Link className="" href={"/deposit"}>
+                <Image
+                  className=""
+                  src="/images/appbar-bottom/deposit.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  priority
+                />
+                <span className="">ฝากเงิน</span>
+              </Link>
+
+              <Link className="" href={"/withdraw"}>
+                <Image
+                  className="w-[32px]"
+                  src="/images/appbar-bottom/withdraw.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                />
+                <span className="">ถอนเงิน</span>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link className="" href={"/signin"}>
+                <Image
+                  className="w-[32px]"
+                  src="/images/appbar-bottom/login.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                />
+                <span className="">เข้าสู่ระบบ</span>
+              </Link>
+              <Link className="" href={"/signup"}>
+                <Image
+                  className=""
+                  src="/images/appbar-bottom/register.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  priority
+                />
+                <span className="">สมัครสมาชิก</span>
+              </Link>
+            </>
+          )}
         </div>
 
         <a className="ab-logo">
@@ -70,7 +98,7 @@ const AppbarBottom = () => {
         </div>
 
         <div className="ab-menu-wrapper app-right">
-          <a className="">
+          <Link href={"/event"} className="">
             <Image
               className=""
               src="/images/appbar-bottom/activity.png"
@@ -80,8 +108,8 @@ const AppbarBottom = () => {
               priority
             />
             <span className="">กิจกรรม</span>
-          </a>
-          <a className="">
+          </Link>
+          <Link href={"/"} className="">
             <Image
               className=""
               src="/images/appbar-bottom/line.png"
@@ -91,12 +119,10 @@ const AppbarBottom = () => {
               priority
             />
             <span className="">Line</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
-  ) : (
-    <></>
   );
 };
 

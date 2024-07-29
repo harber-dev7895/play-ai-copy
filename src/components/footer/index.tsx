@@ -1,30 +1,17 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import FooterSlide from "./slide";
-
-import { Keyframes } from "@emotion/react";
-import Reveal from "react-awesome-reveal";
-import { customFadeIn } from "../common/fade/custom-fadeIn";
 
 import "./style.scss";
 
 const Footer = () => {
-  const [animation, setAnimation] = React.useState<Keyframes | undefined>(
-    undefined
-  );
-
-  useEffect(() => {
-    setAnimation(customFadeIn);
-  }, []);
-
   return (
     <>
-      <Reveal keyframes={animation} triggerOnce>
-        <div className="slide-wrapper">
-          <FooterSlide />
-        </div>
-      </Reveal>
+      <div className="slide-wrapper animated animatedFadeInUp fadeInUp">
+        <FooterSlide />
+      </div>
+
       <div className="text-center my-4 max-lg:mb-[113px]">
         <p className="text-[21px] font-semibold py-[14px]">
           Ai123bet เว็บคาสิโนออนไลน์

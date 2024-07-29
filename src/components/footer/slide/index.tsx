@@ -32,6 +32,7 @@ const FooterSlide = () => {
                 width={702}
                 height={250}
                 className="w-full"
+                priority
               />
             </div>
           ))}

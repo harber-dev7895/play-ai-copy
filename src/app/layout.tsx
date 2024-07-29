@@ -7,7 +7,6 @@ import ToastProvider from "@/components/toasts/ToastProvider";
 import { BannerAndContentMenu, SidebarMobile } from "@/components/layout";
 
 import "./globals.css";
-import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "AI COPY",
