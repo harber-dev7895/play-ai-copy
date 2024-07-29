@@ -131,3 +131,18 @@ export const privilegeList = [
   { img: "/images/privilege/2.png", title: "ดูบอล" },
   { img: "/images/privilege/3.png", title: "ดูการ์ตูน" },
 ];
+
+export const rewardList = [
+  {
+    total: 100,
+    detail: "สะสมเพชรครบ 100 เม็ด แลกเคดิตฟรี ได้ 50 เคดิต",
+  },
+  {
+    total: 200,
+    detail: "สะสมเพชรครบ 200 เม็ด แลกเคดิตฟรี ได้ 110 เคดิต",
+  },
+  {
+    total: 300,
+    detail: "สะสมเพชรครบ 300 เม็ด แลกเคดิตฟรี ได้ 170 เคดิต",
+  },
+];
