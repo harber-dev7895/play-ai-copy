@@ -29,11 +29,11 @@ export const contentMenuData: any = [
 ];
 
 export const popupMenuUser: any = [
-  { name: "ข้อมูลบัญชี", img: "/images/popup-user/1.png", link: "/" },
-  { name: "คืนยอดเสีย", img: "/images/popup-user/2.png", link: "/" },
-  { name: "แนะนำเพื่อน", img: "/images/popup-user/3.png", link: "/" },
+  { name: "ข้อมูลบัญชี", img: "/images/popup-user/1.png", link: "/profile" },
+  { name: "คืนยอดเสีย", img: "/images/popup-user/2.png", link: "/loss" },
+  { name: "แนะนำเพื่อน", img: "/images/popup-user/3.png", link: "/affiliate/overview" },
   { name: "ประวัติ", img: "/images/popup-user/4.png", link: "/" },
-  { name: "แลขของรางวัล", img: "/images/popup-user/5.png", link: "/" },
+  { name: "แลขของรางวัล", img: "/images/popup-user/5.png", link: "/reward" },
   { name: "ผูกบัญชีกับไลน์", img: "/images/popup-user/6.png", link: "/" },
   { name: "ออกจากระบบ", img: "/images/popup-user/7.png" },
 ];

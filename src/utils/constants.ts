@@ -15,6 +15,7 @@ export const hiddenPaths = [
   "/reward",
   "/privilege",
   "/rebate",
+  "/profile",
 ];
 
 export const notiSetting: any = {
