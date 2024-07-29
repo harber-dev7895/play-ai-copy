@@ -12,6 +12,7 @@ const config: Config = {
         play: ["Prompt", "sans-serif"],
       },
       backgroundImage: {
+        "g-white": "linear-gradient(180deg, #ffffff, #ffffff)",
         "side-bar": "linear-gradient(180deg, #72ceff, #30c0fe)",
         "side-bar-active": "linear-gradient(180deg, #ff8081, #fe2f2d)",
         "box-content": "linear-gradient(180deg, #9adcff, #53c7ff)",
