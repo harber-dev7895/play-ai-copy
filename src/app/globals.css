@@ -171,3 +171,34 @@ body {
   -o-animation-duration: 0.5s;
   animation-delay: 0.5s;
 }
+
+.swal2-show {
+  animation: swal2-show 0.3s;
+}
+.swal2-hide {
+  animation: swal2-hide 0.15s forwards;
+}
+@keyframes swal2-show {
+  0% {
+    transform: scale(0.7);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes swal2-hide {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}

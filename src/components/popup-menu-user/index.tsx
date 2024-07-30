@@ -113,7 +113,10 @@ const PopupMenuUser = ({ isOpen, setIsOpen }: PopupMenuUserProps) => {
                         key={index}
                         href={item.link || "/"}
                         onClick={() => {
-                          if (!item.link) logout();
+                          if (!item.link) {
+                            localStorage.removeItem("isPopupIntro");
+                            logout();
+                          }
                           setIsOpen(false);
                         }}
                       >
