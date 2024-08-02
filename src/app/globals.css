@@ -202,3 +202,41 @@ body {
     opacity: 0;
   }
 }
+
+.shake-img-random {
+  animation: heartbeat 5s ease-in-out infinite both;
+}
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(0.96);
+    transform: scale(0.96);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}

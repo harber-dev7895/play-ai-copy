@@ -12,7 +12,7 @@ const LotteryPage = () => {
         {lotteryData.map((item: any, index: number) => {
           return (
             <div key={index}>
-              <CardDefault img={item.img} />
+              <CardDefault img={item.img} link={item.link} />
             </div>
           );
         })}

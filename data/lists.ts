@@ -1,30 +1,66 @@
 export const homeData: any = [
-  { link: "/", img: "/images/home/1.png" },
-  { link: "/", img: "/images/home/2.png" },
-  { link: "/", img: "/images/home/3.png" },
-  { link: "/", img: "/images/home/4.png" },
-  { link: "/", img: "/images/home/5.png" },
-  { link: "/", img: "/images/home/6.png" },
-  { link: "/", img: "/images/home/7.png" },
-  { link: "/", img: "/images/home/8.png" },
-  { link: "/", img: "/images/home/9.png" },
-  { link: "/", img: "/images/home/10.png" },
-  { link: "/", img: "/images/home/11.png" },
-  { link: "/", img: "/images/home/12.png" },
-  { link: "/", img: "/images/home/13.png" },
+  { link: "/games/list?category=Slot&gameName=PG", img: "/images/home/1.png" },
+  {
+    link: "/games/list?category=Slot&gameName=Pragmatic Play",
+    img: "/images/home/2.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Jili",
+    img: "/images/home/3.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Joker",
+    img: "/images/home/4.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Askmebet",
+    img: "/images/home/5.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Micro",
+    img: "/images/home/6.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Nolimit",
+    img: "/images/home/7.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Relax",
+    img: "/images/home/8.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Push",
+    img: "/images/home/9.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Bcocngo",
+    img: "/images/home/10.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Print studios",
+    img: "/images/home/11.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Hack saw",
+    img: "/images/home/12.png",
+  },
+  {
+    link: "/games/list?category=Slot&gameName=Mana play",
+    img: "/images/home/13.png",
+  },
 ];
 
 export const casinoData: any = [
-  { link: "/", img: "/images/casino/1.png" },
-  { link: "/", img: "/images/casino/2.png" },
-  { link: "/", img: "/images/casino/3.png" },
-  { link: "/", img: "/images/casino/4.png" },
-  { link: "/", img: "/images/casino/5.png" },
-  { link: "/", img: "/images/casino/6.png" },
-  { link: "/", img: "/images/casino/7.png" },
-  { link: "/", img: "/images/casino/8.png" },
-  { link: "/", img: "/images/casino/9.png" },
-  { link: "/", img: "/images/casino/10.png" },
+  { link: "/games/player", img: "/images/casino/1.png" },
+  { link: "/games/player", img: "/images/casino/2.png" },
+  { link: "/games/player", img: "/images/casino/3.png" },
+  { link: "/games/player", img: "/images/casino/4.png" },
+  { link: "/games/player", img: "/images/casino/5.png" },
+  { link: "/games/player", img: "/images/casino/6.png" },
+  { link: "/games/player", img: "/images/casino/7.png" },
+  { link: "/games/player", img: "/images/casino/8.png" },
+  { link: "/games/player", img: "/images/casino/9.png" },
+  { link: "/games/player", img: "/images/casino/10.png" },
 ];
 
 export const fishingData: any = [
@@ -144,5 +180,78 @@ export const rewardList = [
   {
     total: 300,
     detail: "สะสมเพชรครบ 300 เม็ด แลกเคดิตฟรี ได้ 170 เคดิต",
+  },
+];
+
+export const gamesList = [
+  {
+    name: "Shark Hunter",
+    link: "/games/player",
+    img: "/images/games-list/1.png",
+  },
+  {
+    name: "Futebol Fever",
+    link: "/games/player",
+    img: "/images/games-list/2.png",
+  },
+  {
+    name: "Chicky Run",
+    link: "/games/player",
+    img: "/images/games-list/3.png",
+  },
+  {
+    name: "Zombie Outbreak",
+    link: "/games/player",
+    img: "/images/games-list/4.png",
+  },
+  {
+    name: "Anubis Wrath",
+    link: "/games/player",
+    img: "/images/games-list/5.png",
+  },
+  {
+    name: "Mystic Potion",
+    link: "/games/player",
+    img: "/images/games-list/6.png",
+  },
+  {
+    name: "Pinata Wins",
+    link: "/games/player",
+    img: "/images/games-list/7.png",
+  },
+  {
+    name: "Wild Ape 3258",
+    link: "/games/player",
+    img: "/images/games-list/8.png",
+  },
+  {
+    name: "Cash Mania",
+    link: "/games/player",
+    img: "/images/games-list/9.png",
+  },
+  {
+    name: "Gemstones Gold",
+    link: "/games/player",
+    img: "/images/games-list/10.png",
+  },
+  {
+    name: "Fortune Dragon",
+    link: "/games/player",
+    img: "/images/games-list/11.png",
+  },
+  {
+    name: "Dragon Hatch 2",
+    link: "/games/player",
+    img: "/images/games-list/12.png",
+  },
+  {
+    name: `Werewolf's Hunt`,
+    link: "/games/player",
+    img: "/images/games-list/13.png",
+  },
+  {
+    name: "Tsar Treasures",
+    link: "/games/player",
+    img: "/images/games-list/14.png",
   },
 ];

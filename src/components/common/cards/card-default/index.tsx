@@ -9,16 +9,17 @@ import useIsTablet from "@/hooks/useIsTablet";
 
 interface CardDefaultProps {
   img: string;
+  link: string;
 }
 
-const CardDefault = ({ img }: CardDefaultProps) => {
+const CardDefault = ({ img, link }: CardDefaultProps) => {
   const { isLoggedIn } = useUserStore();
   const isTablet = useIsTablet();
   const router = useRouter();
 
   const handleClick = () => {
     if (isTablet) {
-      isLoggedIn ? router.push("/") : router.push("/signin");
+      isLoggedIn ? router.push(link || "/") : router.push("/signin");
     }
   };
 
@@ -35,7 +36,7 @@ const CardDefault = ({ img }: CardDefaultProps) => {
 
       <div className="overlay">
         <div className="overlay-inner">
-          <Link href={isLoggedIn ? "/" : "/signin"}>
+          <Link href={isLoggedIn ? link || "/" : "/signin"}>
             <FaCirclePlay size={20} />
             <span>{isLoggedIn ? "เข้าเล่น" : "เข้าสู่ระบบ"}</span>
           </Link>
