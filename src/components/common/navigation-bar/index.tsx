@@ -1,5 +1,6 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { IoGameControllerOutline } from "react-icons/io5";
 
@@ -22,4 +23,12 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+// export default NavigationBar;
+
+export default function WrappedNavigationBar() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NavigationBar />
+    </Suspense>
+  );
+}

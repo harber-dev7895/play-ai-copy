@@ -5,6 +5,7 @@ import { FaCirclePlay, FaRegStar } from "react-icons/fa6";
 import { useUserStore } from "@/stores/userStore";
 import { useRouter, useSearchParams } from "next/navigation";
 import useIsTablet from "@/hooks/useIsTablet";
+import { Suspense } from "react";
 
 interface CardGameListProps {
   img: string;
@@ -31,7 +32,7 @@ const CardGameList = ({ img, link, shake, name }: CardGameListProps) => {
       className={`card ${shake ? "shake-img-random" : ""}`}
       onClick={handleClick}
     >
-      <div className="card-games-list">
+      <div className="relative card-games-list">
         <Image
           src={img}
           alt={""}
@@ -62,4 +63,16 @@ const CardGameList = ({ img, link, shake, name }: CardGameListProps) => {
   );
 };
 
-export default CardGameList;
+interface WrappedCardGameListProps {
+  cardProps: CardGameListProps;
+}
+
+export default function WrappedPlayerPage({
+  cardProps,
+}: WrappedCardGameListProps) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CardGameList {...cardProps} />
+    </Suspense>
+  );
+}

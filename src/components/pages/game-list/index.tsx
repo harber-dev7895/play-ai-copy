@@ -14,10 +14,12 @@ const GameListPage = () => {
           return (
             <div key={index}>
               <CardGameList
-                img={item.img}
-                shake={randomNumber.includes(index + 1)}
-                link={item.link}
-                name={item.name}
+                cardProps={{
+                  img: item.img,
+                  shake: randomNumber.includes(index + 1),
+                  link: item.link,
+                  name: item.name,
+                }}
               />
             </div>
           );
